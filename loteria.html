@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Games Addiction</title>
+    <link rel="icon" href="img/logo.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  </head>
+
+  <style type="text/css">
+    
+    nav{
+      font-family: Chalkduster, fantasy;
+    }
+
+    body{
+      font-family: Arial;
+    }
+
+    footer{
+      font-family: Chalkduster, fantasy;
+    }
+
+    .p{
+      background-color: white;
+      opacity: 80%;
+    }
+
+    .tloteria{
+      color: white;
+      font-size: 50px;
+      padding: 30px;
+      text-align: center;
+    }
+
+    .info{
+      background-color: cyan;
+      padding: 10px;
+      border: none;
+      border-radius: 10px;
+      font-family: Arial;
+      font-size: 20px;
+    }
+
+
+  </style>
+
+    <nav class="navbar navbar-expand-lg bg-primary">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html" style="color: white;"><img src="logo_nav.png" height="65">Games Addiction</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+          <div class="navbar-nav">
+            <a style="text-light" class="nav-link" aria-current="page" href="index.html">Inicio</a>
+            <a class="nav-link" href="tienda.html">Tienda</a>
+            <a class="nav-link" href="intercambio.html">Intercambio</a>
+            <a class="nav-link active" href="loteria.html" tabindex="-1">Lotería</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+<body style="background-image: url(gif/estrellado.gif);">
+
+    <div>
+      
+      <h1 class="tloteria">Bienvenido a la sección Lotería<br>
+        <button class="info" type="button" class="btn btn-info" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          ¿Como funciona?
+        </button>
+      </h1>
+
+    </div>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div style="font-family: Arial;" class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">¿Cómo enviar un correo?</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="text-align: justify; ">
+              <img src="img/carpeta.png">
+              <p style="color:red;">⚠️IMPORTANTE⚠️: Todo ticket de lotería tiene premio.</p><br>
+              Las loterías integradas en nuestra tienda Games Addiction funcionan de la siguiente manera:<br><br>
+
+              ¿Como las creamos?<br><br>
+
+              Al crear un nuevo juego de lotería primero le asigamos un precio dependiendo de los premios a entregar, también teniendo un premio máximo que se otorgará al que compre el último número disponible. <br><br>
+
+              ¿Cómo funcionan?<br><br>
+
+              Luego de hacer el pago de un ticket de lotería, se te otorgará una letra al azar donde gracias a ésta, tendrás una lista de premios disponibles a seleccinar. 
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Entiendo</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-1">
+          
+        </div>
+
+        <div style="color: white;border: 2px solid;margin-bottom: 2rem;" class="col-10">
+
+          <div class="row">
+            <div class="col p-3" style="background-color: green;">Loterías Activas</div>
+          </div>
+          <div class="row p-3" style="background-color:#55c83c;">
+            <div class="col-5">Nombre</div>
+            <div class="col-3">Premio Mayor</div>
+            <div class="col-2">Números Restantes</div>
+            <div class="col-2">Precio</div>
+          </div>
+
+          <div class="row p-3" style="background-color:gray;border: 2px solid;border-color: white;border-radius: 2rem">
+            <div class="col-5"><a style="color: white;" href="hatsuteria.html">Hatsutería</a></div>
+            <div class="col-3">Figura Luminasta Hatsune Miku Deep Sea Girl Project Diva Mega 39'S</div>
+            <div class="col-2">15 / 50</div>
+            <div class="col-2">$5.000</div>
+          </div>
+
+          <div class="row p-3" style="background-color:gray;border: 2px solid;border-color: white;border-radius: 2rem">
+            <div class="col-5"><a style="color: white;" href="attackontickets.html">Attack on Tickets</a></div>
+            <div class="col-3">Attack on Titan - Attack Titan (Eren Yeager) Amazing Yamaguchi Revoltech</div>
+            <div class="col-2">79 / 100</div>
+            <div class="col-2">$10.000</div>
+          </div>
+
+          <div class="row p-3" style="background-color:gray;border: 2px solid;border-color: white;border-radius: 2rem">
+            <div class="col-5"><a style="color: white;" href=""></a></div>
+            <div class="col-3"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+          </div>
+
+          <div class="row p-3" style="background-color:gray;border: 2px solid;border-color: white;border-radius: 2rem">
+            <div class="col-5"><a style="color: white;" href=""></a></div>
+            <div class="col-3"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+          </div>
+
+          <div class="row p-3" style="background-color:gray;border: 2px solid;border-color: white;border-radius: 2rem">
+            <div class="col-5"><a style="color: white;" href=""></a></div>
+            <div class="col-3"></div>
+            <div class="col-2"></div>
+            <div class="col-2"></div>
+          </div>
+
+        </div>
+
+        <div class="col-1">
+          
+        </div>
+      </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+
+  <footer class="text-center bg-secondary">
+
+    <div class="container">
+        <div class="row">
+
+            <div class="col-md-4 footer-col">
+                <h1 class="h3">Dirección</h1>
+                <p>
+                    Galeria Caracol Local 187 Concepcion, Concepción, <br> Chile 4030645
+                </p>
+            </div>
+
+            <div class="col-md-4 footer-col">
+
+              <h1 class="h3">Equipo de Games Addiction</h1>
+                <p>Con años de experiencia en el manejo de paginas web <br></p>
+                <h1 class="h4"> Equipo:</h1>
+                <p>Rafael Canales (rafael.canales@virginiogomez.cl)</p>
+                <p>Newen Catriman (newen.catriman@virginiogomez.cl)</p>
+                <p>Bastián Pino (bastian.pino@virginiogomez.cl)</p> 
+
+            </div>
+            
+            <div class="col-md-4 footer-col">
+                
+                <h1 class="h3">Contacto</h1>
+                <p>Fono consultas: +56 9 79414256</p>
+                  
+                <p>Fono Oficial  : +56 9 97093357</p>
+            </div>
+        </div>
+    </div>
+
+  </footer>
+
+</html>

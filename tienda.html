@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games Addiction</title>
+    <link rel="icon" href="img/logo.ico">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    
+    <style>
+        body {
+            font-family: Chalkduster, fantasy;
+            background-image: url(gif/estrellado.gif);
+        }
+        .container {
+            display: flex;
+            width: 90%;
+            max-width: 1200px;
+            height: 90vh;
+            background-color: white;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+        .productos {
+            flex: 3;
+            padding: 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            background-color: #e6e6e6;
+            overflow-y: auto;
+        }
+        .carrito {
+            flex: 1;
+            padding: 20px;
+            background-color: #ffffff;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border-left: 1px solid #ddd;
+        }
+        .producto {
+            background-color: #fff;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        .producto img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .boton-agregar {
+            padding: 10px;
+            font-size: 16px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .boton-agregar:hover {
+            background-color: #2980b9;
+        }
+    
+        .vista-carrito {
+            overflow-y: auto;
+            margin-bottom: 20px;
+        }
+        .boton-pagar {
+            padding: 15px;
+            font-size: 18px;
+            background-color: #2ecc71;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        .boton-pagar:hover {
+            background-color: #27ae60;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg bg-primary">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html" style="color: white;"><img src="logo_nav.png" height="65"> Games Addiction</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse show" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a style="text-light" class="nav-link" aria-current="page" href="index.html">Inicio</a>
+                    <a class="nav-link active" href="tienda.html">Tienda</a>
+                    <a class="nav-link" href="intercambio.html">Intercambio</a>
+                    <a class="nav-link" href="loteria.html" tabindex="-1">Lotería</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mx-auto">
+        <div class="productos">
+            <div class="producto">
+                <img src="img/imgprod/carpeta.png" alt="Producto 1">
+                <h3>Carpeta - Dragon Ball - Goku</h3>
+                <p>Precio: $3.990</p>
+                <button class="boton-agregar" onclick="agregarAlCarrito('Carpeta Dragon Ball Goku - $10.00')">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/imgprod/corek.png" alt="Producto 2">
+                <h3>Core Keeper - Xbox + Llavero Exclusivo</h3>
+                <p>Precio: $19.990</p>
+                <button class="boton-agregar" onclick="agregarAlCarrito('Core Keeper Xbox + Llavero Exclusivo - $19.990')">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/imgprod/funko.png" alt="Producto 3">
+                <h3>Funko Pop - Avengers EndGame - Capitan America</h3>
+                <p>Precio: $16.990</p>
+                <button class="boton-agregar" onclick="agregarAlCarrito('Funko Pop Avengers EndGame Capitan America - $16.990')">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/imgprod/gamecube.png" alt="Producto 4">
+                <h3>Consola - Nintendo GameCube</h3>
+                <p>Precio: $179.990</p>
+                <button class="boton-agregar" onclick="agregarAlCarrito('Consola Nintendo GameCube - $179.990')">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/imgprod/kirby.png" alt="Producto 5">
+                <h3>Peluche - Kirby - Kirby Chef</h3>
+                <p>Precio: $8.990</p>
+                <button class="boton-agregar" onclick="agregarAlCarrito('Peluche Kirby Kirby Chef - $8.990')">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/imgprod/luffy.png" alt="Producto 6">
+                <h3>Figura - One Piece - Luffy</h3>
+                <p>Precio: $24.990</p>
+                <button class="boton-agregar" onclick="agregarAlCarrito('Figura One Piece Luffy - $24.990')">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/imgprod/polera.png" alt="Producto 7">
+                <h3>Polera - Death Note</h3>
+                <p>Precio: $9.990</p>
+                <button class="boton-agregar" onclick="agregarAlCarrito('Polera Death Note - $9.990')">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/imgprod/ps4.png" alt="Producto 8">
+                <h3>Consola - PlayStation 4</h3>
+                <p>Precio: $299.990</p>
+                <button class="boton-agregar" onclick="agregarAlCarrito('Consola PlayStation 4 - $299.990')">Agregar al Carrito</button>
+            </div>
+            <div class="producto">
+                <img src="img/imgprod/vinilo.png" alt="Producto 9">
+                <h3>Vinilo - Dico Korean</h3>
+                <p>Precio: $19.990</p>
+                <button class="boton-agregar" onclick="agregarAlCarrito('Vinilo Dico Korean - $19.990')">Agregar al Carrito</button>
+            </div>
+        </div>
+
+        <div class="carrito">
+            <h2>Carrito de Compras</h2>
+            <div class="vista-carrito" id="vistaCarrito"></div>
+            <button class="boton-pagar" onclick="pagar()">Pagar</button>
+        </div>
+    </div>
+
+    <footer style="margin-top: 2rem;" class="text-center bg-secondary">
+
+    <div class="container-fluid">
+        <div class="row">
+
+            <div class="col-md-4 footer-col">
+                <h1 class="h3">Dirección</h1>
+                <p>
+                    Galeria Caracol Local 187 Concepcion, Concepción, <br> Chile 4030645
+                </p>
+            </div>
+
+            <div class="col-md-4 footer-col">
+
+              <h1 class="h3">Equipo de Games Addiction</h1>
+                <p>Con años de experiencia en el manejo de paginas web <br></p>
+                <h1 class="h4"> Equipo:</h1>
+                <p>Rafael Canales (rafael.canales@virginiogomez.cl)</p>
+                <p>Newen Catriman (newen.catriman@virginiogomez.cl)</p>
+                <p>Bastián Pino (bastian.pino@virginiogomez.cl)</p> 
+
+            </div>
+            
+            <div class="col-md-4 footer-col">
+                
+                <h1 class="h3">Contacto</h1>
+                <p>Fono consultas: +56 9 79414256</p>
+                  
+                <p>Fono Oficial  : +56 9 97093357</p>
+            </div>
+        </div>
+    </div>
+
+  </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <script>
+        let carrito = [];
+
+        function agregarAlCarrito(producto) {
+            carrito.push(producto);
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const vistaCarrito = document.getElementById("vistaCarrito");
+            vistaCarrito.innerHTML = ''; 
+            carrito.forEach((item) => {
+                const elementoCarrito = document.createElement("div");
+                elementoCarrito.classList.add("elemento-carrito");
+                elementoCarrito.innerHTML = `<p>${item}</p>`;
+                vistaCarrito.appendChild(elementoCarrito);
+            });
+        }
+
+        function pagar() {
+            if (carrito.length === 0) {
+                alert("El carrito está vacío.");
+            } else {
+                alert("¡Gracias por su compra!");
+                carrito = []; 
+                actualizarCarrito(); 
+            }
+        }
+    </script>
+</body>
+</html>
